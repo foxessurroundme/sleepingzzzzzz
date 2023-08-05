@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Video Example</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .content {
+            padding: 50px;
+            text-align: center;
+            color: white;
+        }
+
+        .button {
+            background: transparent;
+            width: 50px;
+            height: 50px;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <video autoplay muted loop id="background-video">
+        <source src="C:\Users\ukepe\Downloads\Purple Green Particles Free Background Videos, No Copyright  _ All Background Videos.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <audio id="myAudio">
+        <source src="C:\Users\ukepe\Downloads\Joe Pera Talks You to Sleep _ Adult Swim.mp3">
+        <source src="C:\Users\ukepe\Downloads\“You can’t keep anyone safe can you. Haise… HAISE! (Kaneki) x Cities Aviv - Not That I’m anywhere.mp3">
+        <source src="C:\Users\ukepe\Downloads\“Don’t you dare lie to me“ Arkham knight x dark beach (pastel ghost).mp3">
+        <source src="C:\Users\ukepe\Downloads\“I love you Harry, you make me feel like a person.” x Gigi Masin - Call Me (slowed).mp3">
+        <source src="C:\Users\ukepe\Downloads\“Maybe when I learn to breathe… I’ll finally be able to talk.” x Gigi Masin -  Call Me (Slowed).mp3">
+        <source src="C:\Users\ukepe\Downloads\“i always knew you were special” x suffocation crystal castles..mp3">
+        <source src="">
+    </audio>
+
+    <script>
+        var audioFiles = [
+            "C:\\Users\\ukepe\\Downloads\\Joe Pera Talks You to Sleep _ Adult Swim.mp3",
+            "C:\\Users\\ukepe\\Downloads\\“You can’t keep anyone safe can you. Haise… HAISE! (Kaneki) x Cities Aviv - Not That I’m anywhere.mp3",
+            "C:\Users\ukepe\Downloads\“Don’t you dare lie to me“ Arkham knight x dark beach (pastel ghost).mp3",
+            "C:\\Users\\ukepe\\Downloads\\“I love you Harry, you make me feel like a person.” x Gigi Masin - Call Me (slowed).mp3",
+            "C:\Users\ukepe\Downloads\“Maybe when I learn to breathe… I’ll finally be able to talk.” x Gigi Masin -  Call Me (Slowed).mp3",
+            "C:\Users\ukepe\Downloads\“i always knew you were special” x suffocation crystal castles..mp3",
+            ""
+        ];
+
+        var audioIndex = 0;
+        var myAudio = document.getElementById("myAudio");
+
+        function playNextAudio() {
+            audioIndex++;
+            if (audioIndex >= audioFiles.length) {
+                audioIndex = 0;
+            }
+            myAudio.src = audioFiles[audioIndex];
+            myAudio.play();
+        }
+
+        myAudio.addEventListener('ended', function() {
+            playNextAudio();
+        });
+
+        function playAudio() {
+            myAudio.play();
+        }
+
+        // Autoplay the first audio file
+        myAudio.play();
+    </script>
+
+    <div class="content">
+        <h1>Shhhhhhhhhhh!</h1>
+        <p>Your sleeping.</p>
+        
+        <!-- Add onclick event to call the playAudio() function when the button is clicked -->
+        <a href="#" onclick="playAudio()">
+            <img src="C:\Users\ukepe\Downloads\4auf86v85q95bkmsslojbhmikg-c92cac1eeb0374eeacecceee2bd82d3d.png">
+        </a>
+    </div>
+
+</body>
+</html>
