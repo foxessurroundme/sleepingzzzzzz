@@ -29,8 +29,8 @@
 
         .button {
             background: transparent;
-            width: 50px;
-            height: 50px;
+            width: 500px;
+            height: 500px;
             display: block;
             margin: 0 auto;
         }
@@ -38,29 +38,27 @@
 </head>
 <body>
     <video autoplay muted loop id="background-video">
-        <source src="Untitled video - Made with Clipchamp (1).mp4" type="video/mp4">
+        <source src="C:\Users\ukepe\Downloads\Untitled video - Made with Clipchamp (1).mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 
     <audio id="myAudio">
-        <source src="https://github.com/foxessurroundme/sleepingzzzzzz/blob/main/index.html">
-        <source src="“You can’t keep anyone safe can you. Haise… HAISE! (Kaneki) x Cities Aviv - Not That I’m anywhere.mp3">
-        <source src="C:\Users\ukepe\Downloads\“Don’t you dare lie to me“ Arkham knight x dark beach (pastel ghost).mp3">
-        <source src="C:\Users\ukepe\Downloads\“I love you Harry, you make me feel like a person.” x Gigi Masin - Call Me (slowed).mp3">
-        <source src="C:\Users\ukepe\Downloads\“Maybe when I learn to breathe… I’ll finally be able to talk.” x Gigi Masin -  Call Me (Slowed).mp3">
-        <source src="C:\Users\ukepe\Downloads\“i always knew you were special” x suffocation crystal castles..mp3">
-        <source src="">
+        <source src="C:\Users\ukepe\Downloads\Joe Pera Talks.mp3.mp3" type="audio/mpeg">
+        <source src="C:\Users\ukepe\Downloads\“You can’t keep anyone safe can you. Haise… HAISE! (Kaneki) x Cities Aviv - Not That I’m anywhere.mp3" type="audio/mpeg">
+        <source src="C:\Users\ukepe\Downloads\“Don’t you dare lie to me“ Arkham knight x dark beach (pastel ghost).mp3" type="audio/mpeg">
+        <source src="C:\Users\ukepe\Downloads\“I love you Harry, you make me feel like a person.” x Gigi Masin - Call Me (slowed).mp3" type="audio/mpeg">
+        <source src="C:\Users\ukepe\Downloads\“Maybe when I learn to breathe… I’ll finally be able to talk.” x Gigi Masin -  Call Me (Slowed).mp3" type="audio/mpeg">
+        <source src="C:\Users\ukepe\Downloads\“i always knew you were special” x suffocation crystal castles..mp3" type="audio/mpeg">
     </audio>
 
     <script>
         var audioFiles = [
-            "C:\\Users\\ukepe\\Downloads\\Joe Pera Talks You to Sleep _ Adult Swim.mp3",
+            "C:\\Users\\ukepe\\Downloads\\Joe Pera Talks.mp3.mp3",
             "C:\\Users\\ukepe\\Downloads\\“You can’t keep anyone safe can you. Haise… HAISE! (Kaneki) x Cities Aviv - Not That I’m anywhere.mp3",
-            "C:\Users\ukepe\Downloads\“Don’t you dare lie to me“ Arkham knight x dark beach (pastel ghost).mp3",
+            "C:\\Users\\ukepe\\Downloads\\“Don’t you dare lie to me“ Arkham knight x dark beach (pastel ghost).mp3",
             "C:\\Users\\ukepe\\Downloads\\“I love you Harry, you make me feel like a person.” x Gigi Masin - Call Me (slowed).mp3",
-            "C:\Users\ukepe\Downloads\“Maybe when I learn to breathe… I’ll finally be able to talk.” x Gigi Masin -  Call Me (Slowed).mp3",
-            "C:\Users\ukepe\Downloads\“i always knew you were special” x suffocation crystal castles..mp3",
-            ""
+            "C:\\Users\\ukepe\\Downloads\\“Maybe when I learn to breathe… I’ll finally be able to talk.” x Gigi Masin -  Call Me (Slowed).mp3",
+            "C:\\Users\\ukepe\\Downloads\\“i always knew you were special” x suffocation crystal castles..mp3"
         ];
 
         var audioIndex = 0;
@@ -83,19 +81,23 @@
             myAudio.play();
         }
 
-        // Autoplay the first audio file
-        myAudio.play();
+        // Manual start of the audio autoplay
+        function startAudioAutoplay() {
+            myAudio.play();
+        }
     </script>
 
     <div class="content">
         <h1>Shhhhhhhhhhh!</h1>
         <p>Your sleeping.</p>
+        <p>Make sure the audio is not muted.</p>
         
-        <!-- Add onclick event to call the playAudio() function when the button is clicked -->
-        <a href="#" onclick="playAudio()">
-            <img src="C:\Users\ukepe\Downloads\4auf86v85q95bkmsslojbhmikg-c92cac1eeb0374eeacecceee2bd82d3d.png">
+        <!-- Add onclick event to call the startAudioAutoplay() function when the button is clicked -->
+        <a href="#" onclick="startAudioAutoplay()">
+            <img src="C:\Users\ukepe\Downloads\4auf86v85q95bkmsslojbhmikg-c92cac1eeb0374eeacecceee2bd82d3d.png" alt="Play Button" class="button">
         </a>
     </div>
 
 </body>
 </html>
+
